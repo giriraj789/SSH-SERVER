@@ -9,5 +9,5 @@ RUN	yum install openssh* -y && \
 	sed 's@session\s*required\s*pam_loginuid.so@session optional pam_loginuid.so@g' -i /etc/pam.d/sshd
 #Network Port for communication
 EXPOSE	22
-#Executing python web server
+#Executing ssh server
 CMD     ["/usr/bin/sshd", "-D"]
